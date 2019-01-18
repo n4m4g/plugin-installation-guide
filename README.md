@@ -1,5 +1,5 @@
 # plugin-installation-guide
-Installation guide about vim ycm...
+Installation guide about ycm for C/C++ and jedi for python.
 
 ## Install YouCompleteMe with Vundle
 1. Set up Vundle.
