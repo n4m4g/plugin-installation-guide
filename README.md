@@ -50,13 +50,14 @@ Installation guide about vim ycm...
    
    `python3 install.py --clang-completer`
    
-5. Copy the ycm config file to .vim
+5. Copy the ycm config file to .vim.
 
    `cd .vim`
    
    `cp ./bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py .`
    
-6. Add the follow line to .vimrc
+6. Add the follow line to .vimrc.
+
    `let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'`
    
 7. Add lib path and include path of C/C++ to .ycm_extra_conf.py.
