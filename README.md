@@ -115,3 +115,15 @@ Installation guide about vim ycm...
    'cpp/ycm/benchmarks/benchmark/include',
    ]
    ```
+   
+## Install jedi-vim with Vundle
+1. Clone the jedi resource.
+   `git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim`
+
+2. Add the following line in your ~/.vimrc
+
+   `Plugin 'davidhalter/jedi-vim'`
+   
+3. Install Plugins.
+
+   Launch vim and run :PluginInstall
