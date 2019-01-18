@@ -3,6 +3,7 @@ Installation guide about vim ycm...
 
 ## Install YouCompleteMe with Vundle
 1. Set up Vundle.
+
    `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 2. Configure Plugins.
    Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
@@ -40,10 +41,12 @@ Installation guide about vim ycm...
    Launch vim and run :PluginInstall
    
 4. Compiling YCM with semantic support for C-family languages since (The ycmd server SHUT DOWN (restart with ':YcmRestartServer')).
+
    `cd ~/.vim/bundle/YouCompleteMe`
    `python3 install.py --clang-completer`
    
 5. Copy the ycm config file to .vim
+
    `cd .vim`
    `cp ./bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py .`
 6. Add lib path and include path of C/C++ to .ycm_extra_conf.py
