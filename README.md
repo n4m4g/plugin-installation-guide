@@ -5,7 +5,9 @@ Installation guide about vim ycm...
 1. Set up Vundle.
 
    `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+   
 2. Configure Plugins.
+
    Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
 
    ```vim
@@ -37,7 +39,9 @@ Installation guide about vim ycm...
    " see :h vundle for more details or wiki for FAQ
    " Put your non-Plugin stuff after this line
    ```
-3. Install Plugins
+   
+3. Install Plugins.
+
    Launch vim and run :PluginInstall
    
 4. Compiling YCM with semantic support for C-family languages since (The ycmd server SHUT DOWN (restart with ':YcmRestartServer')).
@@ -51,7 +55,9 @@ Installation guide about vim ycm...
    `cd .vim`
    
    `cp ./bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py .`
-6. Add lib path and include path of C/C++ to .ycm_extra_conf.py
+   
+6. Add lib path and include path of C/C++ to .ycm_extra_conf.py.
+
    ```vim
    flags = [
    '-Wall',
