@@ -43,11 +43,13 @@ Installation guide about vim ycm...
 4. Compiling YCM with semantic support for C-family languages since (The ycmd server SHUT DOWN (restart with ':YcmRestartServer')).
 
    `cd ~/.vim/bundle/YouCompleteMe`
+   
    `python3 install.py --clang-completer`
    
 5. Copy the ycm config file to .vim
 
    `cd .vim`
+   
    `cp ./bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py .`
 6. Add lib path and include path of C/C++ to .ycm_extra_conf.py
    ```vim
