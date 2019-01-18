@@ -52,9 +52,7 @@ Installation guide about vim ycm...
    
 5. Copy the ycm config file to .vim.
 
-   `cd .vim`
-   
-   `cp ./bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py .`
+   `cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py ~/.vim`
    
 6. Add the follow line to .vimrc.
 
