@@ -85,10 +85,10 @@ Installation guide about ycm for C/C++ and jedi for python.
    '/usr/lib/gcc/x86_64-linux-gnu/7/include',
    '-isystem',
    '/usr/include/x86_64-linux-gnu',
-   '-isystem'
+   '-isystem',
    '/usr/include/c++/7',
    '-isystem',
-   '/usr/include/c++/7/bits'
+   '/usr/include/c++/7/bits',
    '-isystem',
    'cpp/pybind11',
    '-isystem',
@@ -118,6 +118,7 @@ Installation guide about ycm for C/C++ and jedi for python.
    
 ## Install jedi-vim with Vundle
 1. Clone the jedi resource.
+
    `git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim`
 
 2. Add the following line in your ~/.vimrc
