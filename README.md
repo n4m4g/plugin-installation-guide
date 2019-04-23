@@ -65,6 +65,7 @@ Installation guide about ycm for C/C++ and jedi for python.
    # For a C project, you would set this to 'c' instead of 'c++'.
    '-x',
    'c++',
+   
    '-I',
    '/usr/include',
    '-isystem',
@@ -75,6 +76,7 @@ Installation guide about ycm for C/C++ and jedi for python.
    '/usr/include/c++/7',
    '-isystem',
    '/usr/include/c++/7/bits',
+   
    '-isystem',
    'cpp/pybind11',
    '-isystem',
