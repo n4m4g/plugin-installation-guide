@@ -7,11 +7,11 @@ Installation guide about ycm for C/C++ and jedi for python.
 
 ## Clone required repos
 
-   `git clone --recursive https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-   
-   `git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe`
-   
-   `git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim`
+   ```
+   git clone --recursive https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
+   git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe;
+   git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim;
+   ```
    
 ## Setup .vimrc
 
