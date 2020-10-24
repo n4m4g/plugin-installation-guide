@@ -30,14 +30,6 @@ Installation guide about ycm for C/C++ and jedi for python.
    filetype plugin indent on    " required
 
    let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-
-   set encoding=utf-8
-   set tabstop=4
-   set shiftwidth=4
-   set nu
-   set hlsearch
-   set smartindent
-   set scrolloff=5
    ```
 
 ## Install plugins
