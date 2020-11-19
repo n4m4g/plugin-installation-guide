@@ -62,6 +62,6 @@ Installation guide about ycm.
 ## Compile YCM
    
    ```
-   cd ~/.vim/bundle/YouCompleteMe
+   cd ~/.vim/plugged/YouCompleteMe
    python3 install.py --clang-completer
    ```
