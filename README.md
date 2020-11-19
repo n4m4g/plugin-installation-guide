@@ -55,6 +55,7 @@ Installation guide about ycm.
    ```
 
    ```
+   :w
    :source %
    :PlugInstall
    ```
