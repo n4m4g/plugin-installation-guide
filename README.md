@@ -1,5 +1,5 @@
-# plugin-installation-guide
-Installation guide about ycm for C/C++ and jedi for python.
+# Plugin-installation-guide
+Installation guide about ycm.
 
 ## Install latest vim and other required packages
 
@@ -9,35 +9,56 @@ Installation guide about ycm for C/C++ and jedi for python.
    sudo apt update && sudo apt install vim python3-dev git build-essential cmake -y;
    ```
    
-## Clone vim plugin repos
+## Clone vim-plug repos
 
    ```
-   git clone --recursive https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim;
-   git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe;
+   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
    
 ## Setup .vimrc
 
    ```vim
-   set nocompatible              " be iMproved, required
-   filetype off                  " required
-   set rtp+=~/.vim/bundle/Vundle.vim
-   call vundle#begin()
-   Plugin 'VundleVim/Vundle.vim'
-   Plugin 'Valloric/YouCompleteMe'
-   call vundle#end()            " required
-   filetype plugin indent on    " required
+   call plug#begin('~/.vim/plugged')
+   Plug 'git@github.com:Valloric/YouCompleteMe.git'
+   call plug#end()
 
-   let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+   let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
    let g:ycm_confirm_extra_conf=0
-   ```
-
-## Install plugins
-
-   ```
-   vim +PluginInstall +qall
-   ```
    
+   " custom settings
+   " ===============
+   
+   set hlsearch
+   set smartindent
+   set splitright
+   set encoding=utf-8
+
+   " show hybrid line number
+   set number relativenumber
+
+   " replace tab with space
+   set expandtab
+
+   " modify display width of tab
+   set tabstop=4
+
+   " modify display width of indent of tab
+   set shiftwidth=4
+
+   " the number of context lines 
+   " you would like to see above and below the cursor
+   set scrolloff=5
+
+   nmap<C-j> <S-_>i#<Space><Esc>
+   nmap<C-k> <S-_>xx<Space><Esc>
+   vmap<C-j> <S-i>#<Space><Esc>
+   ```
+
+   ```
+   :source %
+   :PlugInstall
+   ```
+
 ## Compile YCM
    
    ```
