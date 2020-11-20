@@ -19,16 +19,19 @@ Installation guide about ycm.
 
    ```vim
    call plug#begin('~/.vim/plugged')
-   Plug 'git@github.com:Valloric/YouCompleteMe.git'
+   Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
    Plug 'preservim/nerdtree'
    call plug#end()
 
+   " config for ycm
    let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
    let g:ycm_confirm_extra_conf=0
-   
-   " custom settings
-   " ===============
-   
+
+   " config for nerdtree
+   autocmd vimenter * NERDTree
+
+   " custom config
+   " =============
    set hlsearch
    set smartindent
    set splitright
@@ -59,11 +62,4 @@ Installation guide about ycm.
    :w
    :source %
    :PlugInstall
-   ```
-
-## Compile YCM
-   
-   ```
-   cd ~/.vim/plugged/YouCompleteMe
-   python3 install.py --clang-completer
    ```
