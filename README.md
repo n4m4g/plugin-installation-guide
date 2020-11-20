@@ -20,6 +20,7 @@ Installation guide about ycm.
    ```vim
    call plug#begin('~/.vim/plugged')
    Plug 'git@github.com:Valloric/YouCompleteMe.git'
+   Plug 'preservim/nerdtree'
    call plug#end()
 
    let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
