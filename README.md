@@ -8,6 +8,9 @@ Installation guide about ycm.
    sudo add-apt-repository ppa:jonathonf/vim;
    sudo apt update && sudo apt install vim python3-dev git build-essential cmake -y;
    ```
+   ```
+   pip install flake8
+   ```
    
 ## Clone vim-plug repos
 
@@ -21,6 +24,7 @@ Installation guide about ycm.
    call plug#begin('~/.vim/plugged')
    Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
    Plug 'preservim/nerdtree'
+   Plug 'vim-syntastic/syntastic'
    call plug#end()
 
    " config for ycm
@@ -28,10 +32,19 @@ Installation guide about ycm.
    let g:ycm_confirm_extra_conf=0
 
    " config for nerdtree
-   autocmd vimenter * NERDTree
+   map <F8> :NERDTreeFind<CR>
+
+   " config for syntastic
+   set statusline+=%#warningmsg#
+   set statusline+=%{SyntasticStatuslineFlag()}
+   set statusline+=%*
+   let g:syntastic_always_populate_loc_list = 1
+   let g:syntastic_auto_loc_list = 1
+   let g:syntastic_check_on_open = 1
+   let g:syntastic_check_on_wq = 0
+   let g:syntastic_python_checkers = ['flake8']
 
    " custom config
-   " =============
    set hlsearch
    set smartindent
    set splitright
@@ -53,8 +66,13 @@ Installation guide about ycm.
    " you would like to see above and below the cursor
    set scrolloff=5
 
+   " comment single line
    nmap<C-j> <S-_>i#<Space><Esc>
+   
+   " uncomment single line
    nmap<C-k> <S-_>xx<Space><Esc>
+   
+   " comment multiple lines
    vmap<C-j> <S-i>#<Space><Esc>
    ```
 
