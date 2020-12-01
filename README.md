@@ -81,3 +81,20 @@ Installation guide about ycm.
    :source %
    :PlugInstall
    ```
+
+## Add site-packages to sys.path
+
+1. Find the path where the module was located
+
+```
+import [module]
+output = [module].__file__
+print(output)
+```
+   
+2. Add output path to PYTHONPATH environment variable
+
+```
+export PYTHONPATH=[output]:$PYTHONPATH
+```
+ 
