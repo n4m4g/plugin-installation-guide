@@ -1,24 +1,27 @@
 # Plugin-installation-guide
 Installation guide about ycm.
 
-## Install latest vim and other required packages
+## Install nvim and other required packages
 
    ```
    sudo apt purge vim -y && sudo apt autoremove -y;
-   sudo add-apt-repository ppa:jonathonf/vim;
    sudo apt update && sudo apt install vim python3-dev git build-essential cmake -y;
+   
+   wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim
+   chmod +x nvim
+   mv nvim ~/.local/bin
    ```
    ```
-   pip install flake8
+   pip install flake8 neovim
    ```
    
 ## Clone vim-plug repos
 
    ```
-   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
    
-## Setup .vimrc
+## Setup ~/.config/nvim/init.vim
 
    ```vim
    call plug#begin('~/.vim/plugged')
