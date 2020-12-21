@@ -1,5 +1,7 @@
 # Plugin-installation-guide
-Installation guide about ycm.
+Installation guide of neovim, vim-plug and useful vim plugins.
+
+<a href="https://www.linode.com/docs/guides/how-to-install-neovim-and-plugins-with-vim-plug/">reference</a>
 
 ## Install nvim and other required packages
 
@@ -7,6 +9,10 @@ Installation guide about ycm.
    sudo apt purge vim -y && sudo apt autoremove -y;
    sudo apt update && sudo apt install vim python3-dev git build-essential cmake -y;
    
+   # w/ sudo
+   sudo apt install neovim
+   
+   # w/o sudo
    wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim
    chmod +x nvim
    mv nvim ~/.local/bin
