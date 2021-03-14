@@ -30,20 +30,30 @@ Installation guide of neovim, vim-plug and useful vim plugins.
 ## Setup ~/.config/nvim/init.vim
 
    ```vim
+   """"""""""""""""""""
+   " vim-plug
+   """"""""""""""""""""
    call plug#begin('~/.vim/plugged')
    Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
    Plug 'preservim/nerdtree'
    Plug 'vim-syntastic/syntastic'
+   Plug 'vim-airline/vim-airline'
    call plug#end()
 
-   " config for ycm
+   """"""""""""""""""""
+   " youcompleteme 
+   """"""""""""""""""""
    let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
    let g:ycm_confirm_extra_conf=0
 
-   " config for nerdtree
-   map <F8> :NERDTreeFind<CR>
+   """"""""""""""""""""
+   " nerdtree 
+   """"""""""""""""""""
+   map <F8> :NERDTreeToggle<CR>
 
-   " config for syntastic
+   """"""""""""""""""""
+   " syntastic 
+   """"""""""""""""""""
    set statusline+=%#warningmsg#
    set statusline+=%{SyntasticStatuslineFlag()}
    set statusline+=%*
@@ -53,36 +63,39 @@ Installation guide of neovim, vim-plug and useful vim plugins.
    let g:syntastic_check_on_wq = 0
    let g:syntastic_python_checkers = ['flake8']
 
-   " custom config
-   set hlsearch
-   set smartindent
+   """"""""""""""""""""
+   " interface 
+   """"""""""""""""""""
    set splitright
    set encoding=utf-8
-
-   " show hybrid line number
-   set number relativenumber
-
-   " replace tab with space
-   set expandtab
-
-   " modify display width of tab
-   set tabstop=4
-
-   " modify display width of indent of tab
-   set shiftwidth=4
-
-   " the number of context lines 
-   " you would like to see above and below the cursor
+   set number relativenumber " show hybrid line number
    set scrolloff=5
+   set cursorline
 
-   " comment single line
-   nmap<C-j> <S-_>i#<Space><Esc>
-   
-   " uncomment single line
-   nmap<C-k> <S-_>xx<Space><Esc>
-   
-   " comment multiple lines
-   vmap<C-j> <S-i>#<Space><Esc>
+   """"""""""""""""""""
+   " text format 
+   """"""""""""""""""""
+   set smartindent
+   set expandtab             " replace tab with space
+   set tabstop=4             " modify display width of tab
+   set shiftwidth=4          " modify display width of indent of tab
+
+   """"""""""""""""""""
+   " searching 
+   """"""""""""""""""""
+   set hlsearch
+   set incsearch
+   set smartcase
+
+   """"""""""""""""""""
+   " key remap 
+   """"""""""""""""""""
+   nmap <C-j> <S-_>i#<Space><Esc>
+   vmap <C-j> <S-i>#<Space><Esc>
+   nmap <C-k> <S-_>xx<Space><Esc>
+   nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+   nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+   nnoremap <leader>go :YcmCompleter GoTo<CR>
    ```
 
    ```
