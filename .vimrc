@@ -34,6 +34,8 @@ let g:syntastic_python_checkers = ['flake8']
 """"""""""""""""""""
 " interface 
 """"""""""""""""""""
+syntax on
+filetype indent on
 set splitright
 set encoding=utf-8
 set number relativenumber " show hybrid line number
@@ -58,6 +60,10 @@ set smartcase
 """"""""""""""""""""
 " key remap 
 """"""""""""""""""""
+inoremap ( ()<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap [ []<Esc>i
 nmap <C-j> <S-_>i#<Space><Esc>
 vmap <C-j> <S-i>#<Space><Esc>
 nmap <C-k> <S-_>xx<Space><Esc>
