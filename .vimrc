@@ -6,6 +6,7 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 """"""""""""""""""""
@@ -65,14 +66,6 @@ set smartcase
 """"""""""""""""""""
 " key remap
 """"""""""""""""""""
-inoremap ( ()<Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-inoremap [ []<Esc>i
-
-inoremap ) <Right>
-inoremap ] <Right>
-
 nmap <C-j> <S-_>i#<Space><Esc>
 vmap <C-j> <S-i>#<Space><Esc>
 nmap <C-k> <S-_>xx<Space><Esc>
