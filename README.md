@@ -6,7 +6,7 @@ Installation guide of neovim, vim-plug and useful vim plugins.
 ## Remove vim and install required packages
 
 ```
-sudo apt remove --purge vim -y;
+sudo apt remove --purge vim neovim -y;
 sudo apt install cmake -y;
 ```
 
@@ -15,7 +15,7 @@ sudo apt install cmake -y;
 ```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
-./nvim.appimage
+cp nvim.appimage ~/.local/bin/nvim
 ```
 ```
 pip3 install --user flake8 neovim
