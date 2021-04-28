@@ -93,6 +93,10 @@ Installation guide of neovim, vim-plug and useful vim plugins.
    nmap <C-j> <S-_>i#<Space><Esc>
    vmap <C-j> <S-i>#<Space><Esc>
    nmap <C-k> <S-_>xx<Space><Esc>
+   
+   " Fix 'trailing whitespace' and 'blank line contains whitespace'
+   map <F5> <Esc>:%s/\s\+$//e<CR> \| <Esc>:w<CR>
+   
    nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
    nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
    nnoremap <leader>go :YcmCompleter GoTo<CR>
