@@ -15,16 +15,16 @@ sudo apt install cmake -y;
 ```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
-cp nvim.appimage ~/.local/bin/nvim
+mv nvim.appimage ~/.local/bin/nvim
 ```
 ```
-pip3 install --user flake8 neovim
+pip3 install --user --upgrade flake8 neovim
 ```
-   
-## Clone vim-plug repos
+
+## Copy .vimrc
 
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cp .vimrc ~/.vimrc
 ```
    
 ## Reusing Vim configuration
@@ -40,6 +40,12 @@ paste contents below
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
+```
+
+## Clone vim-plug repos
+
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Add site-packages to sys.path
