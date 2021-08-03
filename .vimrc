@@ -2,7 +2,7 @@
 " vim-plug
 """"""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py --clang-completer' }
 Plug 'preservim/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
