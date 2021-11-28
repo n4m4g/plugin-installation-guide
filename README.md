@@ -35,3 +35,25 @@ set tabstop=4 | set shiftwidth=4 | set noexpandtab | %retab!
 " or use abbreviation
 set ts=4 | set sw=4 | set noet | %retab!
 ```
+
+## Smart way to move between windows
+```
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+```
+
+## key mapping
+
+Show key mapping
+```
+:map
+```
+
+Unmap
+```
+:unmap <Key>
+```
+
+ref: [link](http://yyq123.blogspot.com/2010/12/vim-map.html)
