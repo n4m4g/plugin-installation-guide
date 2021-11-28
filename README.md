@@ -9,18 +9,29 @@ Installation guide of neovim, vim-plug and useful vim plugins.
 source run.sh
 ```
 
-## Add site-packages to sys.path
+## Convert tab to space
 
-1. Find the path where the module was located
+Explain
+```
+- tabstop: tab width, 1 tab to n space or n space to 1 tab
+- shiftwidth: indent width
+- expandtab: use space rather than tab
+- noexpandtab: use tab rather than space
+- retab: apply the settings
+```
 
+Replace tab with 4 space
 ```
-import [module]
-output = [module].__file__
-print(output)
+set tabstop=4 | set shiftwidth=4 | set expandtab | %retab!
+" first three are settings, last one is apply
+" or use abbreviation
+set ts=4 | set sw=4 | set et | %retab!
 ```
-   
-2. Add output path to PYTHONPATH environment variable
 
+Replace 4 space with tab
 ```
-export PYTHONPATH=[output]:$PYTHONPATH
+set tabstop=4 | set shiftwidth=4 | set noexpandtab | %retab!
+" first three are settings, last one is apply
+" or use abbreviation
+set ts=4 | set sw=4 | set noet | %retab!
 ```
