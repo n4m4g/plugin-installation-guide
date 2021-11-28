@@ -46,6 +46,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 ```
 
+ref: [link](https://wklken.me/posts/2016/02/03/some-vim-configs.html)
+
 ## key mapping
 
 Show key mapping
