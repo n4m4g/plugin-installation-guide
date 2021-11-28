@@ -36,6 +36,8 @@ set tabstop=4 | set shiftwidth=4 | set noexpandtab | %retab!
 set ts=4 | set sw=4 | set noet | %retab!
 ```
 
+ref: [link](https://stackoverflow.com/questions/9104706/how-can-i-convert-spaces-to-tabs-in-vim-or-linux)
+
 ## Smart way to move between windows
 ```
 map <C-j> <C-W>j
